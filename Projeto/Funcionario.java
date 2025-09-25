@@ -1,10 +1,10 @@
 package Projeto;
 
-public class Funcionario{
+public class Funcionario extends Pessoa{
     private String funcao;
     private String numBanco;
     private String salario;
-
+    
     public Funcionario(){
     }
     public String getFuncao() {

@@ -1,4 +1,5 @@
 package Projeto;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 public class Agenda {
@@ -23,11 +24,18 @@ public class Agenda {
 
     public void listarEventos() {
         System.out.println("Eventos na agenda:");
+        DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd-MM-yyyy 'às' HH:mm");
         for (Evento evento : eventos) {
-            System.out.format("Evento:%s\n- Data:%s\n- Local:%s\n", evento.getNomeEvento(), evento.getData(), evento.getLocal());
+        
+            String dataFormatada = evento.getData().format(formato);
+            System.out.format("Evento:%s\n- Data:%s\n- Local:%s\n", evento.getNomeEvento(), dataFormatada, evento.getLocal());
         }
     }
 
+    public void cancelarEvento(Evento evento) {
+        eventos.remove(evento);
+    }
+    
     public List<Evento> getEventos() {
         return eventos;
     }

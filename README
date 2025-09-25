@@ -1,0 +1,6 @@
+# Agenda de Eventos – cadastro de eventos, participantes e inscrições
+
+# Maior dificuldade
+A maior dificuldade foi lidar com a manipulação de datas e horários (`LocalDate` e `LocalDateTime`) e formatar corretamente a entrada do usuário. Também foi difil organizar a relação entre `Pessoa`, `Funcionario` e `Evento`, garantindo que cada pessoa pudesse ser inscrita em um evento e os funcionários fossem adicionados corretamente.
+
+# Como executar o programa 
